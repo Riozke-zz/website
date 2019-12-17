@@ -3,20 +3,24 @@ html{
 }
 
 body {
-    background: $dark-blue;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: $m-size;
+    background: $off-white;
+    background: -webkit-linear-gradient(to right, white, $off-white);
+    background: linear-gradient(to right, white, $off-white);
+}
+
+.header__menu .headerTitle{
+    cursor: pointer;
+    color:black;    
 }
 
 button {
     cursor: pointer;
+    background: $purple;
+    border: none;
+    font-weight: bold;
+    font-size: $l-size;
 }
-
-/*
-button:disabled {
-    cursor: default;
-}
-*/
 
 .is-active {
     font-weight: bold;

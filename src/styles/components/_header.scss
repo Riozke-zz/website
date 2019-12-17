@@ -1,34 +1,66 @@
-.header {
-    background: $off-black;
-    color: white;
-    margin-bottom: $m-size;
-    padding: $m-size 0;  
-    text-align: center;     
-}
-// BEM block element modifier
-.header__title {
+
+.headerTitle {
     font-size: $l-size;
     margin: 0;
     padding-left: $s-size;
+    padding-right: $s-size;
     padding-bottom: $s-size;
-    color:$orange-menu;
-    text-align: left;
+    color:white;
+    align-items: left;
     size: $xl-size;
+    background: black;
+    padding-top: $s-size;
+    display: inline-block;
 }
 
-.header__menu   {
+.menu {
     color: white;
     font-size: $m-size;
     font-weight: 500;
-    margin: 0;
-    cursor: pointer;
+    cursor: pointer;   
+    text-align: center;   
+    background: white;  
+    display: inline-block;  
+    padding: $-s-size $-s-size $-s-size $-s-size;
+    text-align: center;
+    margin-right: 0; 
+}
+
+.header__menu {
     text-decoration: none;
-    margin-left: $s-size;
-    text-align: right;
+    padding: $m2-size;
+    text-align: center;
+    letter-spacing: 0.145rem;
+    text-transform: uppercase;
 }
 
 @media (min-width: $desktop-breakpoint) {
-    .header {
-        margin-bottom: $xl-size;
+    .headerTitle {
+        margin-bottom: $m-size;
+        align-content: right;
     }
+    .header__menu .actived {
+        background: yellow;
+    }
+
+    .header__menu {
+        transition: color 500ms, transform 500ms;
+    }
+
+    .header__menu:hover {
+        transform:scale(3.50,3.50);
+    }    
+    
+.menu {
+    color: white;
+    font-size: $m-size;
+    font-weight: 500;
+    cursor: pointer;   
+    text-align: center;   
+    background: white;  
+    display: inline-block;  
+    padding: $-s-size $-s-size $-s-size $-s-size;
+    align-content: rigth;
+    margin-right: 0; 
+}
 }

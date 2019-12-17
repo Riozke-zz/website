@@ -2,10 +2,10 @@ import React from 'react';
 import { NavLink } from 'react-router-dom'
 
 const Header = () => (
-    <div className="header">
-        <h1 className="header__title">GITHUB</h1>
-        <div>
-            <NavLink to="/" className="header__menu" activeClassName="is-active" exact={true}>Home</NavLink>
+    <div >
+    <NavLink to="/" className="headerTitle" activeClassName="is-active" exact={true}><h1 className="headerTitle">GITHUB</h1></NavLink>
+        <div className="menu">            
+            <NavLink to="/home" className="header__menu" activeClassName="is-active" >Home</NavLink>
             <NavLink to="/search" className="header__menu" activeClassName="is-active">Search</NavLink>
             <NavLink to="/help" className="header__menu" activeClassName="is-active">SOS Page</NavLink>        
         </div>

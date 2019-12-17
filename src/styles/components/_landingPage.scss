@@ -1,0 +1,71 @@
+.containerLanding {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 25%;
+}
+
+.landingTitle {
+    font-size: 5rem;
+    color: black;
+    line-height: 0.6em;
+    text-align: right;      
+}
+
+.LandingTitle1 {
+    color: white;
+}
+
+.lineLanding {
+    margin: 1rem 0;
+    border-top: none;
+}
+
+.descriptionLanding {
+    color: $off-black;
+}
+
+.bottom {
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttoms {
+    display: flex;   
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn:first-child {
+    margin-right: 0.5rem;
+}
+
+.btnSocial {
+    font-family: fantasy;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border: none;
+    background: #E9F2F1;
+    color: blue;
+    border-radius: 0.5rem;
+    width: 3rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btnSocial:clicked {
+    background: blue;
+    color:white;
+    outline: none;
+}
+
+@media (min-width: $desktop-breakpoint) {
+    
+}

@@ -1,9 +1,10 @@
 import React  from 'react';
 import { useState, useEffect } from 'react';
-import { Card, Image, Icon, Form } from 'semantic-ui-react';
+import { Form, Card, Image, Icon} from 'semantic-ui-react';
 // Components Imports
 import TitlePage from '../components/SerchProfileChildren/title';
 
+//Change the variables to let
 function SearchProfilePage() {
     const [name, setName] = useState('');
     const [userName, setUserName] = useState('');
@@ -16,7 +17,6 @@ function SearchProfilePage() {
     
     /**
      * When the page load this effect going to show an example
-     * from the information that we see in the interfaz
      * only going to load one time and the information that contain
      * is from the example of the API github
      */
@@ -53,6 +53,11 @@ function SearchProfilePage() {
         setUserInput(e.target.value)
     }
 
+    /**
+     * If the username doesn't exists "error message"
+     * if exists render the profile
+     * and setError(null) 
+     */
     const handleSubmit = () => {
         fetch(`https://api.github.com/users/${userInput}`)
             .then(res => res.json())
@@ -61,56 +66,68 @@ function SearchProfilePage() {
                     setError(data.message)
                 } else {
                     setData(data);
+                    setError(null);
                 }                
             })
     }
 
     return (
-        <div>
+        <div className="content">
             <div >
                 <TitlePage />  
             </div>
-            
-            <div>
+            <div className="search" >
                 <Form onSubmit={handleSubmit}>
-                    <Form.Group>
-                        <Form.Input 
-                            placeholder='User' 
-                            name='user' onChange={handleSearch}
-                        />
-                        <Form.Button content='Search'/>
+                    <Form.Group >
+                            <Form.Input
+                                className="inputUser" 
+                                placeholder='User Name' 
+                                name='user' onChange={handleSearch}
+                            />
+                            <Form.Button 
+                                className="buttonSearch"
+                                content='Search'
+                            />                        
                     </Form.Group>
                 </Form>
             </div>
-                {error ? (<h1>{error}</h1>) : (
-            <div className='card'>
-                <Card>
-                <Image src={avatar} wrapped ui={false} />
-                <Card.Content>
-                    <Card.Header>{name}</Card.Header> 
-                    <Card.Header>{userName}</Card.Header>                   
-                </Card.Content>
-                <Card.Content extra>
-                    <a>
+            <div className="content">
+            {error ? (<h1>{error}</h1>) : (
+                <div className='card'>
+                    <Card className="avatarImage">
+                    <Image src={avatar} wrapped ui={false} />
+                    
+                        <Card.Content>
+                        <Card.Header>Name: {name}</Card.Header> 
+                        <Card.Header>User: {userName}</Card.Header>                   
+                        </Card.Content>
+                        
+                    
+                    <Card.Content extra>
+                        <a>
                         <Icon name='user' />
                         {followers} Followers
-                    </a>
-                </Card.Content>
-                <Card.Content extra>
-                    <a>
-                        <Icon name='user' />
-                        {repos} Repos
-                    </a>
-                </Card.Content>
-                <Card.Content extra>
-                    <a>
-                        <Icon name='user' />
-                        {following} Following
-                    </a>
-                </Card.Content>
-                </Card>
+                        </a>
+                        </Card.Content>
+                    <Card.Content extra>
+                        <a>
+                            <Icon name='user' />
+                            {repos} Repos
+                        </a>
+                    </Card.Content>
+                    <Card.Content extra>
+                        <a>
+                            <Icon name='user' />
+                            {following} Following
+                        </a>
+                    </Card.Content>
+                    </Card>
+                </div>
+                )}
             </div>
-            )}     
+             
+            
+                
         </div>
     )
 }

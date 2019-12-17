@@ -5,15 +5,15 @@ import SearchProfilePage from '../components/SearchProfilePage';
 import HelpPage from '../components/HelpPage';
 import ErrorPage from '../components/ErrorPage';
 import Header from '../components/Header';
-
-// Bug - Change the path of /addProject to //search
+import LandingPage from '../components/LandingComponent/LandingPage';
 
 const AppRouter = () => (
     <BrowserRouter>
-        <div>
+        <div> 
             <Header />
             <Switch>
-                <Route path="/" component={HomePage} exact={true}/>                
+                <Route path="/" component={LandingPage} exact={true}/>
+                <Route path="/home" component={HomePage} />                
                 <Route path="/search" component={SearchProfilePage}/>   
                 <Route path="/help" component={HelpPage}/>
                 <Route component={ErrorPage}/>    

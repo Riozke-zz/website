@@ -1,0 +1,47 @@
+.titleProfilePage {
+    padding: $s-size $s-size $-s-size $s-size;
+    color: White;
+    font-size: 2rem;
+    margin-top: $-s-size;    
+}
+
+
+.search {
+    display: flex;
+    justify-content: center;
+}
+
+input[type=text] {
+    font-size: $m-size;
+}
+
+.ui.form .field .ui.input input, .ui.form .field .field .ui.input input {    
+    display: inline;
+    font-size: 1.5rem;
+}
+
+.ui.button, .ui.buttons .button, .ui.buttons .or {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    height: 100%;
+}
+
+.content {
+    margin-top: $-s-size;
+    margin-bottom: $s-size;    
+}
+
+.card {
+    display: flex;
+    justify-content: center;    
+}
+
+.dataProfile {
+    background: white;
+    font-size: $m-size;
+    text-align: center;    
+}
+
+@media (min-width: $desktop-breakpoint) {
+    
+}
