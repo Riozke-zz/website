@@ -23,7 +23,7 @@
     display: inline-block;  
     padding: $-s-size $-s-size $-s-size $-s-size;
     text-align: center;
-    margin-right: 0; 
+    margin-right: 0;
 }
 
 .header__menu {
@@ -62,5 +62,14 @@
     padding: $-s-size $-s-size $-s-size $-s-size;
     align-content: rigth;
     margin-right: 0; 
+    }
 }
+
+@media (min-width: $desktop-breakpoint) {
+     .menu {
+        float: right;
+        margin-top: 3rem;
+        margin-right: 3rem;
+        font-size: 2.5rem;
+     }    
 }

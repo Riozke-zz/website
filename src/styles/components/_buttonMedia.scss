@@ -1,0 +1,49 @@
+h2:first-child {    
+    margin-top: 10%;
+    text-align: center;
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.social-networks-button {
+    font-family: fantasy;
+    font-size: 4.5rem;
+    font-weight: bold;
+    border: none;
+    background: #E9F2F1;
+    color: blue;
+    border-radius: 0.5rem;
+    width: 7rem;
+    height: 6rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 5%;
+}
+
+
+@media (min-width: $desktop-breakpoint) {    
+    h2:first-child {
+        margin-top: 5rem;        
+    }
+
+    .social-networks-button {
+        font-family: fantasy;
+        font-size: 4.5rem;
+        font-weight: bold;
+        border: none;
+        background: #E9F2F1;
+        color: blue;
+        border-radius: 0.5rem;
+        width: 7rem;
+        height: 6rem;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        display: fixed;
+        margin-left: 28rem; 
+    }
+
+}

@@ -1,0 +1,42 @@
+.itemContainer {
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+.titleList {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+
+.paragraphContend {    
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(88, 89, 91, 1.0);
+    font-size: $m-size;
+}
+
+
+@media (min-width: $desktop-breakpoint) {    
+    .listItemDiv {
+        float: left;
+        height: 30%;
+        width: 33.3%;
+    }
+    .itemContainer {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+    
+    .titleList {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: $l-size;
+        color: black;
+    }
+    
+    .paragraphContend {    
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgba(88, 89, 91, 1.0);
+        font-size: $m-size;
+    }   
+}
