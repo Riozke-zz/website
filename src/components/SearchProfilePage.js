@@ -23,7 +23,7 @@ function SearchProfilePage() {
                 .then(res => res.json())
                 .then(data => {
                     // with this console.log we can see the information in our browsers console
-                    console.log(data);
+                    // console.log(data);
                     setData(data)
                 });
     }, []);
