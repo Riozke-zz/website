@@ -1,19 +1,17 @@
 import React  from 'react';
 import { useState, useEffect } from 'react';
 import { Form, Card, Image, Icon} from 'semantic-ui-react';
-// Components Imports
-import TitlePage from '../components/SerchProfileChildren/title';
+import TitlePage from '../components/SearchProfileComponents/Title';
 
-//Change the variables to let
 function SearchProfilePage() {
-    const [name, setName] = useState('');
-    const [userName, setUserName] = useState('');
-    const [followers, setFollowers] = useState('');
-    const [following, setFollowing] = useState('');
-    const [repos, setRepos] = useState('');
-    const [avatar, setAvatar] = useState('');
-    const [userInput, setUserInput] = useState('');
-    const [error, setError] = useState(null);
+    let [name, setName] = useState('');
+    let [userName, setUserName] = useState('');
+    let [followers, setFollowers] = useState('');
+    let [following, setFollowing] = useState('');
+    let [repos, setRepos] = useState('');
+    let [avatar, setAvatar] = useState('');
+    let [userInput, setUserInput] = useState('');
+    let [error, setError] = useState(null);
     
     /**
      * When the page load this effect going to show an example
@@ -24,13 +22,13 @@ function SearchProfilePage() {
             fetch("https://api.github.com/users/example")
                 .then(res => res.json())
                 .then(data => {
-                    // with this console we can see the information in our browsers console
+                    // with this console.log we can see the information in our browsers console
                     console.log(data);
                     setData(data)
                 });
     }, []);
 
-    /**We Obtain the information from API github json 
+    /**We get the information from the API github json 
      * const setData =( { null, example, 12, 0, 1, ProfilePhoto }) => {
      *  setName(null);
      *  setUserName(example);
@@ -56,7 +54,7 @@ function SearchProfilePage() {
     /**
      * If the username doesn't exists "error message"
      * if exists render the profile
-     * and setError(null) 
+     * and setError(null)
      */
     const handleSubmit = () => {
         fetch(`https://api.github.com/users/${userInput}`)
@@ -70,15 +68,16 @@ function SearchProfilePage() {
                 }                
             })
     }
-
     return (
-        <div className="content">
+        <div>
             <div >
-                <TitlePage />  
+                <TitlePage 
+                    title="Search Profile"
+                />  
             </div>
-            <div className="search" >
-                <Form onSubmit={handleSubmit}>
-                    <Form.Group >
+                <div className="search" >
+                    <Form onSubmit={handleSubmit}>
+                        <Form.Group >
                             <Form.Input
                                 className="inputUser" 
                                 placeholder='User Name' 
@@ -88,25 +87,22 @@ function SearchProfilePage() {
                                 className="buttonSearch"
                                 content='Search'
                             />                        
-                    </Form.Group>
-                </Form>
-            </div>
-            <div className="content">
+                        </Form.Group>
+                    </Form>
+                </div>
+            <div>
             {error ? (<h1>{error}</h1>) : (
                 <div className='card'>
                     <Card className="avatarImage">
-                    <Image src={avatar} wrapped ui={false} />
-                    
+                        <Image src={avatar} wrapped ui={false} />                    
                         <Card.Content>
                         <Card.Header>Name: {name}</Card.Header> 
                         <Card.Header>User: {userName}</Card.Header>                   
-                        </Card.Content>
-                        
-                    
+                        </Card.Content> 
                     <Card.Content extra>
                         <a>
-                        <Icon name='user' />
-                        {followers} Followers
+                            <Icon name='user' />
+                            {followers} Followers
                         </a>
                         </Card.Content>
                     <Card.Content extra>
@@ -124,11 +120,8 @@ function SearchProfilePage() {
                     </Card>
                 </div>
                 )}
-            </div>
-             
-            
-                
-        </div>
+            </div>   
+         </div>
     )
 }
 

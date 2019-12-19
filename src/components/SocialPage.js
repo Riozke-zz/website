@@ -1,8 +1,8 @@
 import React from 'react';
 import SocialComponent from './HelPageComponents/SocialMedia';
-import HomeTitle from './HomePageChildren/HomeTitle';
+import HomeTitle from './HomePageComponents/HomeTitle';
 
-const HelpPage = () => (
+const SocialPage = () => (
     <div >
         <HomeTitle 
             title="Our Social Networks" 
@@ -12,4 +12,4 @@ const HelpPage = () => (
     </div>
 );
 
-export default HelpPage;
+export default SocialPage;

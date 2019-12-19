@@ -1,26 +1,26 @@
-.containerLanding {
+.container-landing {
     margin-left: 30%;
     margin-right: 30%;
     margin-top: 25%;
 }
 
-.landingTitle {
+.landing-title {
     font-size: 5rem;
     color: black;
     line-height: 0.8em;
     text-align: right;      
 }
 
-.LandingTitle1 {
+.landing-title-one {
     color: white;
 }
 
-.lineLanding {
+.line-landing {
     margin: 1rem 0;
     border-top: none;
 }
 
-.descriptionLanding {
+.description-landing {
     color: $off-black;
 }
 
@@ -45,7 +45,7 @@
     margin-right: 0.5rem;
 }
 
-.btnSocial {
+.btn-social{
     font-family: fantasy;
     font-size: 1.8rem;
     font-weight: bold;
@@ -67,30 +67,30 @@
 }
 
 @media (min-width: $desktop-breakpoint) {
-    .containerLanding {
+    .container-landing {
         margin-left: 30%;
         margin-right: 30%;
         margin-top: 10%;
     }
 
-    .landingTitle {
+    .landing-title {
         font-size: 8rem;
         color: black;
         line-height: 6rem;
         text-align: right;              
     }
     
-    .LandingTitle1 {
+    .landing-title-one {
         color: white;
         font-size: 8rem;
     } 
     
-    .descriptionLanding {
+    .description-landing {
         font-size: 1.5rem;
         text-align: left;
     }
 
-    .btnSocial {
+    .btn-social {
         font-family: fantasy;
         font-size: 3rem;
         font-weight: bold;
